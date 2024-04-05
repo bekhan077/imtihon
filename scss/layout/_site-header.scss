@@ -1,0 +1,305 @@
+.hero__section {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: black;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .hero__left {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      .icon {
+        display: flex;
+        align-items: center;
+        a {
+          margin-left: 20px;
+        }
+      }
+      .phone__number {
+        display: flex;
+        align-items: center;
+        a {
+          margin-left: 10px;
+          color: white;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+    .hero__right {
+      align-items: center;
+      gap: 30px;
+      display: flex;
+      .usd {
+        display: flex;
+        p {
+          cursor: pointer;
+          color: white;
+          color: white;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+      .language {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        gap: 5px;
+        img {
+          height: 110%;
+        }
+        p {
+          cursor: pointer;
+          color: white;
+          color: white;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+.header__topRight_image {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.header__section {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.number {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.usd_text {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.language {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.header__section {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  padding: 15px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .header__topCenter {
+      ul {
+        display: flex;
+        gap: 30px;
+        li {
+          a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #111;
+          }
+          a:hover {
+            color: #5a5ac9;
+          }
+        }
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  width: 1256px;
+  height: 600px;
+}
+
+ul {
+  li {
+    a {
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+
+.carousel_inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel_inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.carousel_item {
+  position: relative;
+  float: left;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-right: -100%;
+}
+
+.carousel_item__active,
+.carousel_item__pos_prev,
+.carousel_item__pos_next {
+  display: block;
+}
+
+.carousel_item__pos_next {
+  left: 100%;
+}
+
+.carousel_item__pos_next {
+  left: 100%;
+}
+
+.carousel_item__prev {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel_item__next {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel__fade .carousel_item__pos_prev,
+.carousel__fade .carousel_item__pos_next {
+  left: 0;
+  opacity: 0;
+}
+
+.carousel__fade .carousel_item__prev,
+.carousel__fade .carousel_item__next {
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel__fade .carousel_item__active.carousel_item__prev,
+.carousel__fade .carousel_item__active.carousel_item__next {
+  opacity: 0;
+}
+
+.carousel_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 4rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.carousel_description {
+  margin-top: 0.75rem;
+  line-height: 150%;
+}
+
+.carousel_indicator {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  z-index: 1;
+}
+
+.carousel_control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_dot {
+  display: block;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.carousel_dot__active {
+  background-color: lightskyblue;
+  cursor: default;
+  pointer-events: none;
+}
+
+.carousel_button {
+  display: block;
+  padding-inline: 1rem;
+  font-size: 1.375rem;
+  background-color: rgba(135, 206, 250, 0.1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: color 0.25s;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  margin: auto 0;
+}
+
+.carousel_button:hover {
+  color: rgba(135, 206, 250);
+  background-color: rgba(135, 206, 250, 0.5);
+}
+
+.carousel {
+  margin-top: -50px;
+}
+
+.carousel_button {
+  border-radius: 50%;
+  background-color: #00000007;
+}
